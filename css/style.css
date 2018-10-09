@@ -1,0 +1,79 @@
+  
+  body{
+    margin: 0;
+    padding: 0;
+    -webkit-appearance:none;
+}
+  body *{
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+.wrapper{
+    position: absolute;
+    height: 100vh;
+    width: 100vw; 
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  }
+  .calcWrapper{
+    width:350px;
+    height:550px;
+    border:.2px solid #6e6e6e41;
+    margin:10vh auto 2vh auto;
+    display:grid;
+    grid-template-rows:125px 1fr;
+    background-image: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+    box-shadow: 15px 15px 1px 5px #0000001a;
+  }
+  .displayWrapper{
+    background-color: white
+  }
+  .displayWrapper input{   
+    float:right;
+    display:block;
+    border: none;
+    padding-right: 20px;
+  }
+  .operationDisplay{
+    /*border: none;*/
+    width: 100%;
+    height: 55px;
+    margin-top: 15px;
+    text-align: right;
+    font-size: 30px;
+  }
+  .resultDisplay{
+    /*border: none;*/
+    width: 100%;
+    height: 45px;
+    text-align: right;
+    font-size: 23px;
+    color: #a4a4a4e6;
+  }
+  .btnsWrapper{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  }
+  
+  .calc-btn{
+    border:.1px solid #6e6e6e25;
+    text-align:center;
+    background-color: inherit;
+    font-size: 20px;
+  }
+  .calc-btn:hover{
+    text-align:center;
+    background-color: #dfdfdf70;
+  }
+  .big-btn{
+    grid-row:5/6;
+    grid-column:1/3;
+  }
+  .lst-col{
+    background-color: #fdad34;
+    color: #ffffff;
+  }
+  .lst-col:hover{
+    background-color: #f8a01bf3;
+  }
