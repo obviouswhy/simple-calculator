@@ -34,18 +34,19 @@
     border: none;
     padding-right: 20px;
   }
-  .operationDisplay{
+  .resultDisplay  {
     /*border: none;*/
     width: 100%;
     height: 55px;
-    margin-top: 15px;
+    margin-top: 5px;
     text-align: right;
     font-size: 30px;
   }
-  .resultDisplay{
+  .operationDisplay {
     /*border: none;*/
     width: 100%;
     height: 45px;
+    margin-top: 5px;
     text-align: right;
     font-size: 23px;
     color: #a4a4a4e6;
