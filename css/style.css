@@ -31,15 +31,16 @@
     border-radius: 3px;
   }
   .displayWrapper input{   
-    float:right;
     display:block;
     border: none;
     padding-right: 20px;
     text-overflow: ellipsis;
-    direction: rtl;
+    /*direction: rtl;*/
+  }
+  .displayWrapper input:focus{ 
+    caret-color: transparent;
   }
   .resultDisplay  {
-    /*border: none;*/
     width: 100%;
     height: 55px;
     margin-top: 5px;
@@ -47,7 +48,6 @@
     font-size: 30px;
   }
   .operationDisplay {
-    /*border: none;*/
     width: 100%;
     height: 45px;
     margin-top: 5px;

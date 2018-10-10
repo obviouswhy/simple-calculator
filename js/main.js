@@ -2,42 +2,43 @@
 var keyVal;
 var operation = "";
 var calcKeys = document.querySelectorAll('.calc-btn');
+var resultDisplay = document.querySelector('.resultDisplay');
+var opDisplay = document.querySelector('.operationDisplay');
 calcKeys.forEach(key => key.addEventListener('click',(e) => {
     switch (key.value) {
         case 'AC':
             operation = "";
+            opDisplay.value = "";
+            resultDisplay.value = "";
             break;
         case '=':
             doCalc(operation);
             break;
-    /*    case 'AC':
-            operation = "";
+        case 'DEL':
+            removeLast(operation);
             break;    
-        case 'AC':
-            operation = "";
-            break;
-        case 'AC':
-            operation = "";
-            break;    */
         default:
             operation = operation + key.value
+            updateDisplay(operation);
             break;
     }
-    /*operation = operation + key.value;
-    console.log(key.value); 
-    console.log(operation);*/
-    document.querySelector('.operationDisplay').value = operation;
-    document.querySelector('.operationDisplay').setSelectionRange(0,0);    
-}));
+ }));
+
+function updateDisplay(op) {
+    opDisplay.value = op;
+    operation = op;
+}
 
 function doCalc(op) {
-    console.log(op);
-    
-}
-/* Makes the pointer in the display stay in the last digit */
-function rtl(element)
-{   
-    if(element.setSelectionRange){
-        element.setSelectionRange(0,0);
+    try {
+        resultDisplay.value = eval(op);
+        operation=""; 
     }
+    catch(err) {
+        resultDisplay.value = '..3rr0r..'
+    }
+}
+function removeLast(op) {
+    op = op.substr(0,(op.length -1));
+    updateDisplay(op);
 }
